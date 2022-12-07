@@ -1,7 +1,7 @@
-const {readFileSync, promises: fsPromises} = require('fs');
+import { readFileSync, promises as fsPromises } from 'fs';
 const { empty } = require('prelude-ls');
 
-function syncReadFile(filename) {
+function syncReadFile(filename : string) {
     const contents = readFileSync(filename, 'utf-8');
     const arr = contents.split(/\r?\n/);
     let sum = 0;
